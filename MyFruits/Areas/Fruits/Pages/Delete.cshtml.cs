@@ -7,22 +7,26 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MyFruits.Data;
 using MyFruits.Models;
+using MyFruits.Services;
 
 namespace MyFruits.Areas.Fruits.Pages
 {
     public class DeleteModel : PageModel
     {
         private readonly ApplicationDbContext ctx;
+        private ImageService imageService;
 
-        public DeleteModel(ApplicationDbContext ctx)
+        public DeleteModel(ApplicationDbContext ctx, ImageService imageService)
         {
             this.ctx = ctx;
+            this.imageService = imageService;
         }
 
         [BindProperty]
         public Fruit Fruit { get; set; } = default!;
+        public string ErrorMessage { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id, bool? hasErrorMessage = false)
         {
             if (id == null)
             {
@@ -41,6 +45,12 @@ namespace MyFruits.Areas.Fruits.Pages
             {
                 Fruit = fruit;
             }
+
+            if (hasErrorMessage.GetValueOrDefault())
+            {
+                ErrorMessage = $"Une erreur est survenue lors de la tentative de suppression de {Fruit.Name} ({Fruit.Id})";
+            }
+
             return Page();
         }
 
@@ -60,15 +70,20 @@ namespace MyFruits.Areas.Fruits.Pages
                 return NotFound();
             }
 
-            var fruit = await ctx.Fruits.FindAsync(id);
-            if (fruit != null)
+            try
             {
-                Fruit = fruit;
-                ctx.Fruits.Remove(Fruit);
+
+                imageService.DeleteUploadedFile(fruitToDelete.Image);
+                ctx.Fruits.Remove(fruitToDelete);
                 await ctx.SaveChangesAsync();
+
+                return RedirectToPage("./Index");
+
+            } catch (Exception)
+            {
+                return RedirectToAction("./Delete", new { id, hasErrorMessage = true});
             }
 
-            return RedirectToPage("./Index");
         }
     }
 }

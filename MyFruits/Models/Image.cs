@@ -5,7 +5,7 @@ namespace MyFruits.Models;
 
 public class Image
 {
-    public string Id { get; set; }  
+    public int Id { get; set; }  
 
     public string? Name { get; set; }
 
@@ -17,5 +17,5 @@ public class Image
 
     public int FruitId { get; set; }
 
-    public virtual Fruit? Fruit { get; set; }
+    public Fruit? Fruit { get; set; }
 }

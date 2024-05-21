@@ -29,9 +29,15 @@ public class ImageService
         return image;
     }
 
-    internal void DeleteUploadedFile(Image image)
+    public void DeleteUploadedFile(Image? image)
     {
-        throw new NotImplementedException();
+        if (image == null)
+            return;
+
+        var imagePath = pathService.GetUploadsPath(Path.GetFileName(image.Path));
+
+        if (File.Exists(imagePath))
+            File.Delete(imagePath);
     }
 
     private string GetRandomFileName(string filename) 

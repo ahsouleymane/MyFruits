@@ -13,7 +13,7 @@ namespace MyFruits.Services;
         this.env = env;
     }
 
-    public string GetUploadsPath(string filename = null, bool withWebRootPath = true) 
+    public string GetUploadsPath(string? filename = null, bool withWebRootPath = true) 
     {
         var pathOptions = new PathOptions();
         configuration.GetSection(PathOptions.Path).Bind(pathOptions);
