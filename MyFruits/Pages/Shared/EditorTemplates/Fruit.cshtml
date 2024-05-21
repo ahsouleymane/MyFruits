@@ -19,7 +19,11 @@
 </div>
 
 <div class="form-group">
-    <label asp-for="Image" class="control-label"></label>
+    <label asp-for="Image.File" class="control-label"></label>
+    @if (null != Model.Image)
+    {
+        <span>(<a target="_blank" href="@Url.Content($"~/{Model.Image.Path}")">@Model.Image.Name</a>)</span>
+    }
     <input asp-for="Image.File" class="form-control" />
     <span asp-validation-for="Image.File" class="text-danger"></span>
 </div>

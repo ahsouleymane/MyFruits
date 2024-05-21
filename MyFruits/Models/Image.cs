@@ -7,9 +7,9 @@ public class Image
 {
     public string Id { get; set; }  
 
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
-    public string Path { get; set; }
+    public string? Path { get; set; }
 
     [NotMapped]
     [Display(Name = "Image")]
@@ -17,5 +17,5 @@ public class Image
 
     public int FruitId { get; set; }
 
-    public virtual Fruit Fruit { get; set; }
+    public virtual Fruit? Fruit { get; set; }
 }

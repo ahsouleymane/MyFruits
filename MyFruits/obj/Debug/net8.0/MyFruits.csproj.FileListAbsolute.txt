@@ -260,3 +260,4 @@ C:\Users\abdou.souleymane\source\repos\MyFruits\MyFruits\obj\Debug\net8.0\refint
 C:\Users\abdou.souleymane\source\repos\MyFruits\MyFruits\obj\Debug\net8.0\MyFruits.pdb
 C:\Users\abdou.souleymane\source\repos\MyFruits\MyFruits\obj\Debug\net8.0\MyFruits.genruntimeconfig.cache
 C:\Users\abdou.souleymane\source\repos\MyFruits\MyFruits\obj\Debug\net8.0\ref\MyFruits.dll
+C:\Users\abdou.souleymane\source\repos\MyFruits\MyFruits\obj\Debug\net8.0\MyFruits.sourcelink.json

@@ -12,11 +12,11 @@ namespace MyFruits.Areas.Fruits.Pages
 {
     public class DeleteModel : PageModel
     {
-        private readonly MyFruits.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext ctx;
 
-        public DeleteModel(MyFruits.Data.ApplicationDbContext context)
+        public DeleteModel(ApplicationDbContext ctx)
         {
-            _context = context;
+            this.ctx = ctx;
         }
 
         [BindProperty]
@@ -29,7 +29,9 @@ namespace MyFruits.Areas.Fruits.Pages
                 return NotFound();
             }
 
-            var fruit = await _context.Fruits.FirstOrDefaultAsync(m => m.Id == id);
+            var fruit = await ctx.Fruits
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (fruit == null)
             {
@@ -49,12 +51,21 @@ namespace MyFruits.Areas.Fruits.Pages
                 return NotFound();
             }
 
-            var fruit = await _context.Fruits.FindAsync(id);
+            var fruitToDelete = await ctx.Fruits
+                .Include(f => f.Image)
+                .FirstOrDefaultAsync(f => f.Id == id);
+
+            if (fruitToDelete == null)
+            {
+                return NotFound();
+            }
+
+            var fruit = await ctx.Fruits.FindAsync(id);
             if (fruit != null)
             {
                 Fruit = fruit;
-                _context.Fruits.Remove(Fruit);
-                await _context.SaveChangesAsync();
+                ctx.Fruits.Remove(Fruit);
+                await ctx.SaveChangesAsync();
             }
 
             return RedirectToPage("./Index");

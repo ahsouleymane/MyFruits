@@ -11,13 +11,13 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
-            
+        <form method="post" enctype="multipart/form-data">
             <partial name="~/Pages/Shared/EditorTemplates/Fruit.cshtml" model="@Model.Fruit" />
 
             <div class="form-group mt-2">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
 </div>
@@ -25,7 +25,3 @@
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

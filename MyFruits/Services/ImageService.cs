@@ -29,6 +29,11 @@ public class ImageService
         return image;
     }
 
+    internal void DeleteUploadedFile(Image image)
+    {
+        throw new NotImplementedException();
+    }
+
     private string GetRandomFileName(string filename) 
     {
         return Guid.NewGuid() + Path.GetExtension(filename);

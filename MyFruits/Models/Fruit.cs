@@ -14,7 +14,7 @@ public class Fruit
 
     public string Description { get; set; }
 
-    public virtual Image Image { get; set; }
+    public virtual Image? Image { get; set; }
 
     [Column(TypeName = "decimal(3, 2)")]
     [DataType(DataType.Currency)]
