@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyFruits.Models;
 
 namespace MyFruits.Data
 {
@@ -9,5 +10,8 @@ namespace MyFruits.Data
             : base(options)
         {
         }
+        public virtual DbSet<Fruit> Fruits { get; set; }
+
+        public virtual DbSet<Image> Images { get; set; }
     }
 }
