@@ -189,6 +189,42 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\13e6e4cb-3b6a-4d9f-b25a-e1cc46b34945.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\13e6e4cb-3b6a-4d9f-b25a-e1cc46b34945.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\17c5f54a-0539-45d4-9546-ea3cb81108a1.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\17c5f54a-0539-45d4-9546-ea3cb81108a1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\26e8d91c-8a6e-4be9-b951-8b539f022b6a.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\26e8d91c-8a6e-4be9-b951-8b539f022b6a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\2dcd5d39-202a-4005-a628-b0d2d278416c.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\2dcd5d39-202a-4005-a628-b0d2d278416c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\51a43910-fb35-468c-bd2d-0084ef92b115.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\51a43910-fb35-468c-bd2d-0084ef92b115.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\670ee402-d426-487c-94de-791ce0a9c2fb.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\670ee402-d426-487c-94de-791ce0a9c2fb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\87957bf4-54b3-4048-8fc2-76cd0049516e.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\87957bf4-54b3-4048-8fc2-76cd0049516e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\98478f98-f7f5-40e9-a158-a031bdb266be.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\98478f98-f7f5-40e9-a158-a031bdb266be.jpg"
+    },
+    {
+      "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\fruits\\images\\cd22885d-0f59-4ffb-9a80-3ccf5f07643b.jpg",
+      "PackagePath": "staticwebassets\\fruits\\images\\cd22885d-0f59-4ffb-9a80-3ccf5f07643b.jpg"
+    },
+    {
       "Id": "C:\\Users\\abdou.souleymane\\source\\repos\\MyFruits\\MyFruits\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

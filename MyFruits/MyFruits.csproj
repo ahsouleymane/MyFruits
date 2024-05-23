@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-MyFruits-513bd3a1-dc8c-4071-b8b3-57528c8b8341</UserSecretsId>
   </PropertyGroup>

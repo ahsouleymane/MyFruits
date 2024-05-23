@@ -17,5 +17,5 @@ public class Image
 
     public int FruitId { get; set; }
 
-    public Fruit? Fruit { get; set; }
+    public virtual Fruit? Fruit { get; set; }
 }

@@ -24,7 +24,7 @@
     {
         <span>(<a target="_blank" href="@Url.Content($"~/{Model.Image.Path}")">@Model.Image.Name</a>)</span>
     }
-    <input asp-for="Image.File" class="form-control" />
+    <input type="file" asp-for="Image.File" class="form-control" />
     <span asp-validation-for="Image.File" class="text-danger"></span>
 </div>
 
